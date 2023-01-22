@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "<h3>DOCES</h3>" > index.html
+for i in doces/*txt; do echo "<a href=/recipes/$i>$(basename ${i/.txt/})</a><br>" ; done >> index.html
+echo "<h3>SALGADOS</h3>" >> index.html
+for i in salgados/*txt; do echo "<a href=/recipes/$i>$(basename ${i/.txt/})</a><br>" ; done >> index.html
+echo "<h3>SOPAS</h3>" >> index.html
+for i in sopas/*txt; do echo "<a href=/recipes/$i>$(basename ${i/.txt/})</a><br>" ; done >> index.html
+echo "<h3>MOLHOS</h3>" >> index.html
+for i in molhos/*txt; do echo "<a href=/recipes/$i>$(basename ${i/.txt/})</a><br>" ; done >> index.html
